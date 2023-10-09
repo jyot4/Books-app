@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
 import { useContext } from 'react'
 import { searchContext } from '../First'
-import { Link, Navigate } from 'react-router-dom'
-// import { Navigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 import "./SearchBooks.css"
 import serverUrl from '../Url'
@@ -16,7 +15,7 @@ function SearchBooks() {
 
 
     const { session,searchBooksdata ,setSearchBookShow } = useContext(searchContext)
-    // console.log(searchBooksdata)
+  
     function handleShowBooks (e ,book, bookId
         ){
         e.preventDefault()

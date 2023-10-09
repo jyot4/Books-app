@@ -1,14 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import "./Product.css"
-// import requests from '../Home/requests'
 import ProductRow from './ProductRow'
 import axios from 'axios'
 import { useContext } from 'react'
 import { searchContext } from '../First'
 import serverUrl from '../Url'
-
-// import { searchContext } from '../First'
 
 function Product() {
 

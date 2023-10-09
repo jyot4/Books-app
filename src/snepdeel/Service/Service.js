@@ -10,7 +10,7 @@ function Service() {
     <h1>"Echoes of Imagination: A Bookshelf Odyssey"</h1>
     </div>
     <div className='service-right'>
-      <img src={service}/>
+      <img src={service} alt='gif'/>
     </div>
    
 

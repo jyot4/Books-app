@@ -1,7 +1,6 @@
 import React, { useContext, useState } from 'react'
 import { Link } from 'react-router-dom'
 import "./Header.css"
-// import logo from "../../juCUFrK (1).png"
 import { useNavigate } from 'react-router-dom'
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import FavoriteIcon from '@mui/icons-material/Favorite';
@@ -9,12 +8,6 @@ import axios from 'axios'
 import { searchContext } from '../First'
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import CloseIcon from '@mui/icons-material/Close';
-import Profile from '../Admin/Profile/Profile';
-// import Favorite from '../Favorite/Favorite';
-import SearchIcon from '@mui/icons-material/Search';
-import Home from '../Home/Home';
-
-// import axios from 'axios'
 
 function Header() {
   const { setSearchBooksData, favoriteBooks } = useContext(searchContext)
@@ -23,7 +16,7 @@ function Header() {
   const nevigate = useNavigate()
   const[admin , setAdmin]= useState(false)
 
-  const session = localStorage.getItem("session")
+  
 
 
 //................................Search books...................//

@@ -1,8 +1,6 @@
 import React from 'react'
-// import AboutImage from './AboutImage-2.jpg'
 import "./About.css"
 import { Link } from 'react-router-dom'
-import image from './img2.jpg'
 import image2 from "./imgg.jpg"
 
 function About() {

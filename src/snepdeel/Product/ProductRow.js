@@ -1,18 +1,9 @@
 
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 
-// import ".././Home.css"
-import Product from './Product';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
-// import RemoveRedEyeOutlinedIcon from '@mui/icons-material/RemoveRedEyeOutlined';
-// import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
-import FavoriteIcon from '@mui/icons-material/Favorite';
-// import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
-// import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-// import book from "../../../book.jpg"
-// import "./Row.css"
 import "./Product.css"
 import { useContext } from 'react';
 import { searchContext } from '../First';
@@ -21,7 +12,7 @@ import serverUrl from '../Url';
 
 function ProductRow(props) {
 
-    const { totalBooks, setSearchBookShow,filterBooks  } = useContext(searchContext)
+    const {setSearchBookShow,filterBooks  } = useContext(searchContext)
  
     const nevigate = useNavigate()
     const session = localStorage.getItem("session")

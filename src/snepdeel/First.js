@@ -3,9 +3,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './Home/Home'
 import Header from './Header/Header'
 import About from './About/About'
-// import Cart from './Cart/Cart'
-// import Form from "./Form/Form"
-// import ProductRow from './Product/ProductRow'
 import Product from "./Product/Product"
 import Footer from './Footer/Footer'
 import LearnMore from './About/LearnMore'
