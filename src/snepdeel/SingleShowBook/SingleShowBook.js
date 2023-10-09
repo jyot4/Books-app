@@ -6,9 +6,10 @@ import { Link } from 'react-router-dom'
 import axios from 'axios'
 // import { Link } from 'react-router-dom'
 import { ToastContainer, toast } from "react-toastify";
+import serverUrl from '../Url'
 
 function SingleShowBook() {
-    const { searchBookShow } = useContext(searchContext)
+    const { searchBookShow , session} = useContext(searchContext)
     const [inputValue, setInputValue] = useState("")
     const [rating, setRating] = useState(0);
     const [clickRating, setClickRating] = useState(false);
@@ -54,7 +55,7 @@ function SingleShowBook() {
         let ratingBook = searchBookShow._id;
         if (clickRating) {
             console.log(rating)
-          axios.patch(`${porturl}/rating/${session}`, { ratingBook, rating })
+          axios.patch(`${serverUrl}/rating/${session}`, { ratingBook, rating })
             .then((result) => {
               if (result.data.status === 200) {
                 toast.success(result.data.message)

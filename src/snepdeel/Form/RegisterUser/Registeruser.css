@@ -1,109 +1,87 @@
-*{
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
-}
-.register{
-    height: 90vh;
-    width: 100%;
+.register {
+    background-color: #906357;
     display: flex;
-    align-items: center;
     justify-content: center;
-    z-index:0;
-    position: relative;
-    background: url(../../../login1.png) no-repeat scroll center / cover;
-}
-.register::before{
-    content: "";
-    z-index:1;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-.register .registerContent{
-    z-index:2;
-    width:33%;
-
-    display: flex;
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    /* margin-right: 150px; */
-    border:  1px solid rgb(0, 0, 0);
-    /* font-size: 30px; */
-    height: 80%;
-    color: rgb(193, 193, 193);
-    border-radius: 20px;
-    box-shadow: 0px 0px 5px 1px rgb(31, 30, 30);
-    background: none;
-    padding: 15px;
-
-}
-/* form{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-} */
-.registerContent h1{
-    font-size: 55px;
-    text-align: center;
+    height: 100vh; /* Adjusted height to 100% viewport height */
+  }
   
-}
-.registerContent label{
+  .registerContent {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 400px; /* Adjusted width for better content placement */
+  }
+  
+  .registerContent h1 {
+    color: #906357;
     font-size: 24px;
-    margin-top: 20px;
-}
-.registerContent input{
-    font-size: 20px;
-    background: none;
-    border:1px solid  black;
-    outline:gray;
-    margin-top: 20px;
-    color:  rgb(193, 193, 193);
-    box-shadow: 0px 0px 5px 2px rgb(32, 31, 31);
-    border-radius: 20px;
-    padding: 5px 10px;
-}
-.registerContent button{
-    margin: 15px 0px 15px 130px;
-    background: none;
-    outline:gray ;
-   
-    border: 1px solid black;
-    box-shadow: 0px 0px 5px 2px rgb(32, 31, 31);
-    border-radius: 20px;
-    text-align: center;
-    color:  rgb(193, 193, 193);
-    padding:5px 20px ;
-    
-}
-.registerContent button a{
-    font-size: 21px;
-    background: none;
-    text-decoration: none;
-    color:  rgb(193, 193, 193);
-    transition: all 0.8s ease;
+    margin-bottom: 20px;
+  }
   
-}
-.registerContent button a:hover{
-    color: rgb(231, 231, 231) ;
-}
-.registerContent h2{
+  .registerform {
     display: flex;
+    /* flex-direction: column; */
     align-items: center;
-    justify-content: space-between;
-    font-size: 20px;
-}
-.registerContent h2 a{
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    width: 100%;
+   
+  }
+  
+  label {
+    font-weight: bold;
+    color: #906357;
+   width: 35%;
+   margin: 5px;
+   padding: 8px 15px;
+   /* background-color: black; */
+  }
+  
+.input{
+    width: 55%;
+    padding: 8px 12px;
+    margin:5px;
+    border: 1px solid #906357;
+    border-radius: 4px;
+  }
+  
+  button{
+    background-color: #906357;
+    color: #fff;
+    border: none;
+    text-align: center;
+    /* width: 30%; */
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #7a573f; /* Darker shade of #906357 for hover effect */
+  }
+  h3{
+    width: 100%;
+    margin: 10px 0px;
+
+  }
+  
+  h2 {
+    margin: 10px 0px;
+  }
+  
+  h2 a {
     text-decoration: none;
-    transition:  all 0.8s ease;
-    color:  rgb(193, 193, 193);
-}
-.registerContent h2 a:hover{
-    color: rgb(231, 231, 231) ;
-    /* list-style:upper-latin; */
-}
+    color: #906357;
+    font-weight: bold;
+  }
+  
+  h2 a:hover {
+    color: #7a573f; /* Darker shade of #906357 for hover effect */
+  }
+  

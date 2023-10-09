@@ -1,39 +1,38 @@
 import React from 'react'
-import "./Footer.css"
+import { Link } from "react-router-dom"
+import './Footer.css'
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
+
+import EmailIcon from '@mui/icons-material/Email';
+import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone';
+
+
 
 function Footer() {
   return (
     <>
-    <footer>
-      <div className='firstList'>
-        <h1>Company</h1>
-      <ul>
-        <li>About Us</li>
-        <li>Career</li>
-        <li>Blog</li>
-        <li>Contact Us</li>
-      </ul>
+      <div className='footer_main'>
+        <div className='footer'>
+          <p><EmailIcon /> jyotivyass2000@gmail.com</p>
+          <p><PhoneIphoneIcon />+1 5589 55488 55</p>
+          </div>
+          <div className='footer1'>
+            <ul>
+              <li>
+                <Link to="https://www.linkedin.com/in/jyoti-vyas-901993244/" className='icon'> <LinkedInIcon /></Link></li>
+              <li><Link to="https://github.com/jyot4" className='icon'> <GitHubIcon /></Link></li>
+              <li> <Link to="https://mail.google.com/mail/u/0/#inbox" className='icon'><EmailIcon /></Link></li>
+
+
+
+              {/* <li>priya</li> */}
+            </ul>
+
+         
+        </div>
+
       </div>
-      <div className='firstList'>
-      <h1>Help</h1>
-      <ul>
-        <li>Payment</li>
-        <li>Shipping</li>
-        <li>Return</li>
-        <li>FAQ</li>
-      </ul>
-      </div>
-      <div className='firstList'>
-      <h1>Misc</h1>
-      <ul>
-        <li>Affiliate</li>
-        <li>Sitemap</li>
-        <li>Affiliate</li>
-        <li>Sitemap</li>
-      </ul>
-      </div>
-     
-    </footer>
     </>
   )
 }

@@ -82,7 +82,13 @@ function currentReadBooks (){
 
   //.........................Rating Books.........................//
 
-
+  function ratingBooks(){
+    axios.get(`${serverUrl}/ratingbooks/${session}`)
+    .then((result) => {
+      setFilterBooks(result.data.collectData)
+      console.log(result.data.collectdata)
+    })
+  }
   return (
     <>
       <div className='books'>
@@ -93,20 +99,18 @@ function currentReadBooks (){
             <li onClick={likeBooks}><Link to="">Favorite</Link></li>
             <li onClick={commentBooks}><Link to="">Commented</Link></li>
             <li onClick={currentReadBooks}><Link to="">Current Read</Link></li>
-            <li onClick={() => handleClick("allbooks")}><Link to="">Rating</Link></li>
+            <li onClick={ratingBooks}><Link to="">Rating</Link></li>
             <li onClick={searchBooks}><Link to="">Search</Link></li>
           </ul>
           <h3>Library</h3>
           <ul>
-            <li onClick={() => handleClick("allbooks")}><Link to="">All Books</Link></li>
+           
             <li onClick={() => handleClick("mostpopular")}><Link to="">Most popular</Link></li>
-            <li onClick={() => handleClick("")}><Link to="">Fiction</Link></li>
+            
             <li onClick={() => handleClick("poetry")}><Link to="">Poetry</Link></li>
             <li onClick={() => handleClick("fantasy")}><Link to="">fantasy</Link></li>
             <li onClick={() => handleClick("romance")}><Link to="">Romance</Link></li>
-            <li onClick={() => handleClick("")}><Link to="">Flower</Link></li>
-            <li onClick={() => handleClick("")}><Link to="">Horror</Link></li>
-            <li onClick={() => handleClick("")}><Link to="">Cookbooks</Link></li>
+            
 
           </ul>
         </div>

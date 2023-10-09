@@ -30,18 +30,19 @@ function Registeruser() {
     <div className='register'>
       <div className='registerContent'>
         <h1>Register</h1>
-        <form  onSubmit={handleSubmit}>
+        <form  className='registerform' onSubmit={handleSubmit}>
           <label>Name </label>
-          <input type='text' value={name} onChange={(e) => setName(e.target.value)} name="name" placeholder='Name' /><br />
+          <input className='input' type='other' value={name} onChange={(e) => setName(e.target.value)} name="name" placeholder='Name' /><br />
           <label>Email </label>
-          <input type='email' value={email} onChange={(e) => setEmail(e.target.value)} name="email" placeholder='Email' /><br />
+          <input className='input' type='email' value={email} onChange={(e) => setEmail(e.target.value)} name="email" placeholder='Email' /><br />
           <label>Phone </label>
-          <input type='text' value={phone} onChange={(e) => setPhone(e.target.value)} name="phone" placeholder='Phone' /><br />
+          <input className='input' type='number' value={phone} onChange={(e) => setPhone(e.target.value)} name="phone" placeholder='Phone' /><br />
           <label>Username </label>
-          <input type='text' value={username} onChange={(e) => setUsername(e.target.value)} name="username" placeholder='Username' /><br />
+          <input className='input' type='other' value={username} onChange={(e) => setUsername(e.target.value)} name="username" placeholder='Username' /><br />
           <label>Password </label>
-          <input type='password' value={password} onChange={(e) => setPassword(e.target.value)} name="password" placeholder='Password' /><br />
+          <input className='input' type='other' value={password} onChange={(e) => setPassword(e.target.value)} name="password" placeholder='Password' /><br />
           <button type='submit' name="register"> Register</button>
+          <h3>or</h3>
           <h2><Link to="/sign">Login</Link> </h2>
         </form>
       </div>

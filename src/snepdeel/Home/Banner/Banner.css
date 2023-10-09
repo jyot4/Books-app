@@ -1,57 +1,64 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
+/* Banner.css */
 
-.banner{
+.banner {
+    position: relative;
     width: 100%;
-    height: 90vh;
-    display: flex;
-    align-items: center;
-    /* background-color: #c2c2c2; */
-    justify-content: center;
-    padding: 0px 20px;
-    background: url(../../../image/banner3.jpeg) no-repeat scroll center / cover;
-
-}
-.imageOverContent, .image{
-    text-align: center;
-    display: flex;
-    /* background-color: #474747; */
-    width: 50%;
-    height: 90%;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    z-index: 2;
-}
-.image{
-    width: 40%;
-    height: 70%;
-    /* background-color: rgb(231, 231, 231); */
-}
-.image img {
-    width: 60%;
+    max-height: 500px; /* Adjust the desired height */
+    overflow: hidden;
+  }
+  
+  .backgroundImage img {
+    width: 100%;
     height: 100%;
-border-radius: 3px;
-}
-.imageOverContent h1{
-    font-size: 70px;
-    /* margin-top: 100px; */
-}
-.imageOverContent p {
-    width: 70%;
+    object-fit: cover;
+  }
+  
+  .overlayContent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
-    font-size: 18px;
-    
-}
-.imageOverContent a{
-    font-size: 26px;
-    text-decoration: none;
-    color: rgb(96, 96, 96);
-    background-color: white;
-    border-radius: 20px;
-    padding: 4px 20px;
-    margin-top: 20px;
-}
+    color: #fff;
+  }
+  
+  .overlayContent h1 {
+    margin: 15px 0;
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+
+  }
+  
+  .overlayContent h1:first-child {
+    font-size: 4rem;
+    color: black; /* Use your highlight color */
+  }
+  
+  .overlayContent h1:last-child {
+    font-size: 2rem;
+    opacity: 0.7;
+  }
+  
+  .overlayContent h1:hover {
+    color: #d7b80b; /* Change to your desired highlight color */
+    transition: color 0.3s ease;
+  }
+  
+  .overlayContent h1:not(:last-child) {
+    border-bottom: 2px solid #9BA4B5; /* Use your secondary color for border */
+    padding-bottom: 10px;
+  }
+  
+  .overlayContent h1:first-child:before,
+  .overlayContent h1:last-child:after {
+    content: '';
+    display: block;
+    height: 4px;
+    width: 40px;
+    background-color: #e2c20b; /* Use your highlight color */
+    margin: 10px auto;
+  }
+  
+  /* Add more custom styles as needed */
+  

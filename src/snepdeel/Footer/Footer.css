@@ -1,37 +1,58 @@
 *{
-    padding: 0;
-    margin: 0;
+    margin:0;
+    padding:0;
     box-sizing: border-box;
 }
-footer{
+
+
+.footer_main{
     display: flex;
-    /* height: 300px; */
-    width: 100%;
+    justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    justify-content:space-around;
-    background-color:#CBBCB1;
-    color: #200c06;
-    padding: 0px 50px;
+    padding: 10px 20px;
+    background-color: #906357;
+    width: 100%;
+    /* margin-top: 50px; */
 }
-.firstList{
-    width: 22%;
+
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin-top: 20px; */
+    
 }
-ul{
-    list-style: none;
-}
-.firstList ul li{
-    list-style: none;
-    font-size: 22px;
-    margin: 20px 0;
-}
-@media all and (max-width:570px){
-   .firstList{
-    width: 50%;
-   }
-}
-@media all and (max-width:430px){
-    .firstList{
-     width: 100%;
-    }
+
+ .footer p{
+    color:white;
+    font-size: 18px;
+    margin: 0px 10px;
  }
+.footer1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer1 ul{
+display: flex;
+align-items: center;
+justify-content: center;
+list-style: none;
+}
+
+
+.footer1 ul li a{
+    margin: 0px 10px;
+    text-decoration: none;
+    font-size: 20px;
+    color:white;
+
+}
+/* .footer1 ul li a svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-i4bv87-MuiSvgIcon-root {
+    font-size: 30px;
+} */
+
+
+
+

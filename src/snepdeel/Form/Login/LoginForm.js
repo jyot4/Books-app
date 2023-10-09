@@ -39,7 +39,7 @@ function LoginForm() {
         <div className='loginContent'>
           <h1>Login</h1>
           
-          <form method='post' onSubmit={handleLogin}>
+          <form className='loginform' method='post' onSubmit={handleLogin}>
             <label>Username </label>
             <input type="text" name='username'
             value={username} onChange={e => {setUsername(e.target.value)}}
@@ -50,10 +50,10 @@ function LoginForm() {
             value={password}
             onChange={e => {setPassword(e.target.value)}}
               placeholder='Password'></input><br />
-            <button type='submit' name='login'>Login</button>
+            <button type='submit' name='login' className='loginBtn'>Login</button>
           </form>
               {/* <Link to="/register">Create account </Link>    */}
-          <div> <Link to="/register" className='a'>create</Link> </div>
+          <div> <Link to="/register" className='anchor'>create</Link> </div>
         </div>
       </div>
     </>

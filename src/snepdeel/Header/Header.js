@@ -12,6 +12,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import Profile from '../Admin/Profile/Profile';
 // import Favorite from '../Favorite/Favorite';
 import SearchIcon from '@mui/icons-material/Search';
+import Home from '../Home/Home';
 
 // import axios from 'axios'
 
@@ -98,7 +99,7 @@ function handleLogout(e) {
                 value={inputValue}
                 onChange={(e) => { setInputValue(e.target.value) }}
               ></input>
-              <button type='submit'>Search</button>
+              <button type='submit' className='searchBtn'>Search</button>
             </form>
            
           </div>
@@ -119,23 +120,20 @@ function handleLogout(e) {
         </div>
         <div className='bottomHeader'>
           <ul>
-           
-            <li>
-              <Link to="/cart">Cart</Link>
+          <li>
+              <Link to="/">Home</Link>
 
             </li>
+            
             <li>
-              <Link to="/">About</Link>
+              <Link to="/about">About</Link>
 
             </li>
             <li>
               <Link to="/product">Books</Link>
 
             </li>
-            <li>
-              <Link to="/contact">Contact</Link>
-
-            </li>
+           
             <li>
               <Link to="/service">Service</Link>
 

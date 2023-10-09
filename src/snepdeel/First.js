@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-// import Home from './Home/Home'
+import Home from './Home/Home'
 import Header from './Header/Header'
 import About from './About/About'
 // import Cart from './Cart/Cart'
@@ -8,8 +8,7 @@ import About from './About/About'
 // import ProductRow from './Product/ProductRow'
 import Product from "./Product/Product"
 import Footer from './Footer/Footer'
-import Contect from './Contacts/Contect'
-import Service from './Service/Service'
+import LearnMore from './About/LearnMore'
 import Registeruser from './Form/RegisterUser/Registeruser'
 import Login from "./Form/Login/LoginForm"
 import SearchBooks from './SearchBooks/SearchBooks'
@@ -17,6 +16,7 @@ import { createContext } from 'react'
 import SingleShowBook from './SingleShowBook/SingleShowBook'
 import Favorite from './Favorite/Favorite'
 import Profile from './Admin/Profile/Profile'
+import Service from './Service/Service'
 // import { Provider } from 'react'
 // import  Login  from './Form/Login/Login'
 export const searchContext = createContext({})
@@ -39,17 +39,19 @@ function First() {
                     <Header />    
                     <Routes>
                         
-                        <Route path='/' element={<About />}></Route>
+                        <Route path='/' element={<Home />}></Route>
+                        <Route path='/about' element={<About />}></Route>
                         <Route path='/product' element={<Product />}></Route>
                         <Route path='/admin/profile' element={<Profile />}></Route>
                         {/* <Route path='/product/productrow' element={<ProductRow />}></Route> */}
-                        <Route path='/service' element={<Service />}></Route>
-                        <Route path='/contact' element={<Contect />}></Route>
+                        
                         <Route path='favorite' element={<Favorite/>}></Route>
                         <Route path='/sign' element={<Login />}></Route>
                         <Route path='/register' element={<Registeruser />}></Route>
                         <Route path='/searchbooks' element={<SearchBooks />}></Route>
                         <Route path='/singleshowbook' element={<SingleShowBook />}></Route>
+                        <Route path='/learnmore' element={<LearnMore />}></Route>
+                        <Route path='/service' element={<Service />}></Route>
                     </Routes>
                     <Footer />
                 </BrowserRouter>      
