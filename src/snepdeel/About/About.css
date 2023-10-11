@@ -1,13 +1,15 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-.about{
+
+.about {
     width: 100%;
 
 }
-.about .banner{
+
+.about .banner {
     width: 100%;
     height: 80vh;
     z-index: 0;
@@ -19,7 +21,8 @@
     position: relative;
     background: url(./AboutImage-3.jpg) no-repeat scroll center / cover;
 }
-.banner::before{
+
+.banner::before {
     content: "";
     position: absolute;
     top: 0;
@@ -28,29 +31,33 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
 }
-.bannerContent{
+
+.bannerContent {
     width: 60%;
     position: absolute;
-    top:45%;
-    z-index: 2; 
-     
+    top: 45%;
+    z-index: 2;
+
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 
 }
-.bannerContent h1{
+
+.bannerContent h1 {
     font-size: 50px;
     text-align: center;
     margin-top: 10px;
 }
-.bannerContent p{
+
+.bannerContent p {
     font-size: 18px;
     text-align: center;
     margin-top: 10px;
 }
-.bannerContent a{
+
+.bannerContent a {
     font-size: 20px;
     text-decoration: none;
     padding: 9px 25px;
@@ -62,83 +69,19 @@
 }
 
 
-.AboutContent2{
 
-    
-    display: flex;
-    padding: 10px 50px;
-    background-color: antiquewhite;
-    align-items: center;
-    justify-content: space-between;
-    /* margin: 50px; */
-    padding: 0px 40px;
-    /* position: absolute;
-    top: 850px;
-    right: 0px; */
-    width:100%;
-    height: 600px;
-   
-}
-.AboutContent2 .left{
-    width: 50%;
-text-align: justify;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    height: 100%;
-}
-.AboutContent2 .left h2{
-    font-size: 50px;
-    margin-bottom: 20px;
-    color:#333;
-}
-.AboutContent2 .right {
-    width:40%;
-    height:90%;
-}
-.AboutContent2 .right img{
-    width: 100%;
-    box-shadow: 0px 0px 15px 3px rgb(237, 217, 187);
-    border-radius: 15px;
-    height: 100%;
-}
-
-.AboutContent2 h2 {
-    /* position: absolute; */
-   /* top: 450px; */
-   /* left: px; */
-
-   /* right:1000px; */
-   font-size: 40px;
-
-   
-}
-
-
-/* p{
-    position: absolute;  
-    right:1000px;
-    bottom:50px;
-    width: 400px;
-    margin: 10px;
-    font-size: 25px;
-
-} */
-.Content2{
+.Content2 {
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: #8d7a75;
-    /* margin: 10px; */
-    padding:0px  50px;
-    /* position: absolute;
-    top: 850px;
-    right: 0px; */
-    width:100%;
-    height:600px;
+    padding: 0px 50px;
+    width: 100%;
+    height: 600px;
+    flex-wrap: wrap;
 }
-.Content2 .left{
+
+.Content2 .left {
     width: 50%;
     height: 100%;
     text-align: justify;
@@ -147,24 +90,27 @@ text-align: justify;
     justify-content: center;
     flex-direction: column;
 }
-.Content2 .left h3{
+
+.Content2 .left h3 {
     font-size: 40px;
     margin-bottom: 20px;
 }
-.Content2 .right img{
+
+.Content2 .right img {
     width: 100%;
     height: 90%;
     border-radius: 15px;
     box-shadow: 0px 0px 15px 3px gray;
 }
+
 .Content2 .right {
     width: 40%;
     display: flex;
     align-items: center;
-    height:100%;
+    height: 100%;
 }
 
-@media all and (max-width:930px){
+/* @media all and (max-width:930px){
     .bannerContent h1{
         font-size: 40px;
         margin-top: 6px;
@@ -209,4 +155,96 @@ text-align: justify;
     }
 }
 
+ */
 
+
+
+@media (max-width: 991px) {
+    .bannerContent {
+        width: 80%;
+    }
+
+    .bannerContent h1 {
+        font-size: 40px;
+    }
+
+    .bannerContent p {
+        font-size: 16px;
+    }
+
+    .bannerContent a {
+        font-size: 18px;
+    }
+}
+
+
+@media all and (max-width:900px) {
+
+    .Content2 {
+        height: 500px;
+        width: 100%;
+    }
+
+    .Content2 .right img {
+        width: 100%;
+        height: 80%;
+    }
+
+    .Content2 .left h3 {
+        font-size: 35px;
+        margin-bottom: 16px;
+    }
+
+    .Content2 .left p {
+        font-size: 15px;
+    }
+
+
+}
+
+
+@media all and (max-width : 800px){
+   
+    .Content2 {
+         width:100%;
+         height: 400px;
+    }
+    
+
+    .Content2 .right img{
+        width: 100%;
+        height:70% ;
+    }
+
+    .Content2 .left h3{
+        font-size: 30px;
+        margin-bottom: 14px;
+    }
+
+    .Content2 .left p {
+        font-size: 15px;
+    }
+
+}
+
+/* @media all and (max-width:697px ){
+    
+} */
+
+@media all and (max-width: 767px) {
+    .bannerContent {
+        width: 90%;
+    }
+
+    .bannerContent h1 {
+        font-size: 30px;
+    }
+
+    .bannerContent p {
+        font-size: 14px;
+    }
+
+    .bannerContent a {
+        font-size: 16px;
+    }
+}

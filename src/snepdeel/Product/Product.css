@@ -14,9 +14,9 @@
 
 .books .left {
     width: 20%;
-    position: sticky;
+    position: relative;
     top: 0px;
-    height: 120vh;
+    height: 100vh;
     padding: 20px 0px;
     text-align: center;
     background-color: #AF6B58;
@@ -55,16 +55,13 @@
 
 .left ul li a {
     border-radius: 2px;
-    /* margin-top: 20px; */
     padding: 6px 0px;
     font-size: 20px;
 
     text-align: center;
-    /* margin-top: 2%; */
-    /* padding: 8px 20px; */
     width: 100%;
     display: inline-block;
-    height: 100%;
+    /* height: 100%; */
     transition: all 0.8s ease;
     color:  #200c06;
     transition: all 0.7s ease;
@@ -84,6 +81,22 @@
     /* flex-direction: column; */
 }
 
+
+.start {
+     display: none;
+}
+
+.start svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-i4bv87-MuiSvgIcon-root {
+    color: white;
+    font-size: 35px;
+    text-decoration:  none;
+}
+
+  /* .close svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-i4bv87-MuiSvgIcon-root {
+    font-size: 35px;
+    color: white;
+    text-decoration: none;
+} */
 .book {
     /* display: flex; */
     flex-wrap: wrap;
@@ -209,3 +222,42 @@
 .likeIcon:hover .css-i4bv87-MuiSvgIcon-root{
     transform: scale(1.15);
 }
+
+
+
+@media all and (max-width : 974px){
+
+
+.books  .left {
+     width: 30%;
+}
+
+    .books .left h2 {
+        font-size: 22px;
+        }
+
+        .books .left h3 {
+        font-size: 21px;
+        }
+
+        .books .left ul li {
+            width: 60%;
+        }
+
+        
+        .books .left ul li a {
+            width: 100%;
+            font-size:17px ;
+        }
+}
+
+/* @media all and (max-width: 864px){
+.nav {
+    position: absolute;
+
+}
+
+.start{
+    display: block;
+}
+} */

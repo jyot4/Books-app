@@ -6,27 +6,44 @@ import axios from 'axios'
 import { useContext } from 'react'
 import { searchContext } from '../First'
 import serverUrl from '../Url'
+import MoreVertIcon from '@mui/icons-material/MoreVert';
+import CloseIcon from '@mui/icons-material/Close';
 
 function Product() {
 
-  const[allBooks ,setAllBooks]=useState(false) 
 
-  const {totalBooks,session, setTotalBooks, setFilterBooks } = useContext(searchContext)
+  const [hiddenList, setHiddenList] = useState(false)
 
 
-//.........................total books........................//
+  function menu(e) {
+    e.preventDefault();
+    setHiddenList(false)
+  }
 
-  useEffect( () => {
-     axios.get(`http://localhost:8080/product`)
+  function stops(e) {
+    e.preventDefault();
+    setHiddenList(true)
+
+  }
+
+  const [allBooks, setAllBooks] = useState(false)
+
+  const { totalBooks, session, setTotalBooks, setFilterBooks } = useContext(searchContext)
+
+
+  //.........................total books........................//
+
+  useEffect(() => {
+    axios.get(`http://localhost:8080/product`)
       .then((result) => {
         console.log(result.data)
         setTotalBooks(result.data)
       })
-    
+
   }, [])
 
 
- //.................................Books List Click ..............//
+  //.................................Books List Click ..............//
 
   function handleClick(value) {
     console.log(value)
@@ -51,48 +68,54 @@ function Product() {
   }
 
   //.........................Search Books.........................//
-function searchBooks(){
+  function searchBooks() {
 
-  axios.get(`${serverUrl}/searchbooks/${session}`)
-  .then((result) => {
-    setFilterBooks(result.data)
-  })
-}
+    axios.get(`${serverUrl}/searchbooks/${session}`)
+      .then((result) => {
+        setFilterBooks(result.data)
+      })
+  }
 
   //.........................Current Read Books.......................//
 
-function currentReadBooks (){
-  axios.get(`${serverUrl}/currentreadbooks/${session}`)
-  .then((result) => {
-    setFilterBooks(result.data)
-  })
-}   
+  function currentReadBooks() {
+    axios.get(`${serverUrl}/currentreadbooks/${session}`)
+      .then((result) => {
+        setFilterBooks(result.data)
+      })
+  }
 
   //.........................Comment Books....................//
-  function commentBooks(){
+  function commentBooks() {
     axios.get(`${serverUrl}/commentbooks/${session}`)
-    .then((result) => {
-      setFilterBooks(result.data.collectdata)
-      console.log(result.data.collectdata)
-    })
+      .then((result) => {
+        setFilterBooks(result.data.collectdata)
+        console.log(result.data.collectdata)
+      })
   }
 
   //.........................Rating Books.........................//
 
-  function ratingBooks(){
+  function ratingBooks() {
     axios.get(`${serverUrl}/ratingbooks/${session}`)
-    .then((result) => {
-      setFilterBooks(result.data.collectData)
-      console.log(result.data.collectdata)
-    })
+      .then((result) => {
+        setFilterBooks(result.data.collectData)
+        console.log(result.data.collectdata)
+      })
   }
   return (
     <>
       <div className='books'>
         <div className='left'>
-          <h2>LIBRARY</h2>
+        {
+            hiddenList 
+
+              ? <Link to='' className='close' onClick={menu}><CloseIcon /></Link> :
+              <Link to='' className='start' onClick={stops}><MoreVertIcon /></Link>
+          }
+          <h2>Bookshelf Chronicles</h2>
           <h3>History</h3>
-          <ul>
+          <ul  className='nav'>
             <li onClick={likeBooks}><Link to="">Favorite</Link></li>
             <li onClick={commentBooks}><Link to="">Commented</Link></li>
             <li onClick={currentReadBooks}><Link to="">Current Read</Link></li>
@@ -101,21 +124,21 @@ function currentReadBooks (){
           </ul>
           <h3>Library</h3>
           <ul>
-           
+
             <li onClick={() => handleClick("mostpopular")}><Link to="">Most popular</Link></li>
-            
+
             <li onClick={() => handleClick("poetry")}><Link to="">Poetry</Link></li>
             <li onClick={() => handleClick("fantasy")}><Link to="">fantasy</Link></li>
             <li onClick={() => handleClick("romance")}><Link to="">Romance</Link></li>
-            
+
 
           </ul>
+
+
+         
         </div>
         <div className='right'>
-          <ProductRow endpoint={allBooks}/>
-          {/* <ProductRow endpoint="poetry" heading="Poetry Books" />
-          <ProductRow endpoint="fantasy" heading="Fantasy Books" />  
-          <ProductRow endpoint="romance" heading="Romance Books" /> */}
+          <ProductRow />
 
         </div>
       </div>
