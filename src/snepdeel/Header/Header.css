@@ -127,6 +127,10 @@
 
 }
 
+.admin ul li{
+    list-style: none;
+}
+
 @media all and (max-width:750px) {
     .topHeader h1 {
         width: 100%;

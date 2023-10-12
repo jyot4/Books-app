@@ -41,10 +41,12 @@
 
 .left h2 {
     font-size: 27px;
+    transition: all 0.8s ease;
 }
 .left h3{
     font-size: 22px;   
     margin-top: 10px;
+    transition: all 0.8s ease;
 }
 
 .left ul li {

@@ -113,9 +113,11 @@ function Product() {
               ? <Link to='' className='close' onClick={menu}><CloseIcon /></Link> :
               <Link to='' className='start' onClick={stops}><MoreVertIcon /></Link>
           }
+
+          
           <h2>Bookshelf Chronicles</h2>
           <h3>History</h3>
-          <ul   className='nav'>
+          <ul>
             <li onClick={likeBooks}><Link to="">Favorite</Link></li>
             <li onClick={commentBooks}><Link to="">Commented</Link></li>
             <li onClick={currentReadBooks}><Link to="">Current Read</Link></li>
@@ -123,7 +125,7 @@ function Product() {
             <li onClick={searchBooks}><Link to="">Search</Link></li>
           </ul>
           <h3>Library</h3>
-          <ul  style = {{ top : hiddenList ? "400px" : "-500px"}} className='nav2'>
+          <ul   className='nav2'>
 
             <li onClick={() => handleClick("mostpopular")}><Link to="">Most popular</Link></li>
 
@@ -135,7 +137,6 @@ function Product() {
           </ul>
 
 
-         
         </div>
         <div className='right'>
           <ProductRow />

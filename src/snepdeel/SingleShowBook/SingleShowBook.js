@@ -5,7 +5,8 @@ import "./ShowSingleBook.css"
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 // import { Link } from 'react-router-dom'
-import {toast } from "react-toastify";
+import {  ToastContainer,toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import serverUrl from '../Url'
 
 function SingleShowBook() {
@@ -80,7 +81,7 @@ function SingleShowBook() {
                 <div className="rating-section">
                     {/* <p>Rate this book:</p> */}
                     <div className="stars">
-                        {[1, 2, 3, 4, 5].map((star) => (
+                        {/* {[1, 2, 3, 4, 5].map((star) => (
                             <span
                                 key={star}
                                 className={`star ${rating >= star ? "active" : ""}`}
@@ -88,20 +89,16 @@ function SingleShowBook() {
                                      &#9733;
                                
                             </span>
-                        ))}
+                        ))} */}
                     </div>
-                    <p>{rating > 0 ? `Thank you for rating ${rating} stars!` : ""}</p>
+                    <p>{rating > 0 ? `Thank you for rating ${rating} stars!` : ""} </p>
                 </div>
                 <form onSubmit={(e) => { handleCommentSubmit(e, searchBookShow._id) }}>
                     <textarea type='text' value={inputValue} onChange={(e) => { setInputValue(e.target.value) }} placeholder='Write your review...'></textarea>
                     <button type='submit'>Submit</button>
                 </form>
             </div>
-            {/* <ToastContainer
-              position="top-center"
-              autoClose={3000}
-              theme="dark"
-            /> */}
+           
             <div className='right'>
                 <h1>{`${"Title : "} ${searchBookShow.title}`}</h1>
                 <h2 className='other1Content'>Author <span>&</span> BookType</h2>
@@ -120,8 +117,11 @@ function SingleShowBook() {
                         {showFullDescription ? 'Read Less' : 'Read More'}
                     </Link>
                 )}
-
+<ToastContainer
+ position='top-center'
+/>
             </div>
+
         </div>
 
     )

@@ -1,5 +1,5 @@
 
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 
@@ -9,15 +9,40 @@ import { useContext } from 'react';
 import { searchContext } from '../First';
 import { useNavigate } from 'react-router-dom';
 import serverUrl from '../Url';
+import {  ToastContainer,toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function ProductRow(props) {
 
     const {setSearchBookShow,filterBooks  } = useContext(searchContext)
  
+const [dispayMsg , setDispayMsg]= useState(false) 
+
     const nevigate = useNavigate()
     const session = localStorage.getItem("session")
     
+
+
+    useEffect(()=>{
+const message =  toast.warn('if you want to see book you have to click one of the library')
+
+if(!message){
+    setDispayMsg(true)
+
+
+    setTimeout(()=>{
+        setDispayMsg(false)
+    }, 3000)
+}
+    }, [])
    
+
+// setInterval(()=>{
+//   toast.warning('if you want to see book you have to click one of the liberies')
+// },2000, [] )
+
+
+
     // console.log(totalBooks)
 
 //............................current read book.................//
@@ -84,6 +109,10 @@ function ProductRow(props) {
 
                     })
                 }
+                <ToastContainer 
+                position='top-center'
+                
+                />
             </div>
         </div>
 
