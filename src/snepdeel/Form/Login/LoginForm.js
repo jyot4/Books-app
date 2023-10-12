@@ -21,7 +21,7 @@ function LoginForm() {
       if(result.status === 200){ 
         console.log(" maja aa gya")
         localStorage.setItem("session", result.data)
-         navigate("/home")
+         navigate("/")
        
       } else {
         console.log("dya kuch to gadbad hai")

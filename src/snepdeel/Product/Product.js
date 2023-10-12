@@ -106,7 +106,7 @@ function Product() {
   return (
     <>
       <div className='books'>
-        <div className='left'>
+        <div className='left' >
         {
             hiddenList 
 
@@ -115,7 +115,7 @@ function Product() {
           }
           <h2>Bookshelf Chronicles</h2>
           <h3>History</h3>
-          <ul   style = {{ top : hiddenList ? "80px" : "-500px"}}className='nav'>
+          <ul   className='nav'>
             <li onClick={likeBooks}><Link to="">Favorite</Link></li>
             <li onClick={commentBooks}><Link to="">Commented</Link></li>
             <li onClick={currentReadBooks}><Link to="">Current Read</Link></li>
@@ -123,7 +123,7 @@ function Product() {
             <li onClick={searchBooks}><Link to="">Search</Link></li>
           </ul>
           <h3>Library</h3>
-          <ul  style = {{ top : hiddenList ? "80px" : "-500px"}} className='nav2'>
+          <ul  style = {{ top : hiddenList ? "400px" : "-500px"}} className='nav2'>
 
             <li onClick={() => handleClick("mostpopular")}><Link to="">Most popular</Link></li>
 
