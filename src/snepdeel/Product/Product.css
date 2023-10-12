@@ -7,6 +7,7 @@
 .books {
     width: 100%;
     display: flex;
+   
     /* align-items: center; */
     /* justify-content: center; */
 
@@ -22,6 +23,10 @@
     background-color: #AF6B58;
 
     /* top:100px; */
+}
+
+.left {
+    transition:  all 0.9s ease;
 }
 
 .left ul {
@@ -79,6 +84,11 @@
 .right {
     width: 80%;
     /* flex-direction: column; */
+}
+
+
+.nav ,.nav2 a {
+    transition: all 0.3s;
 }
 
 
@@ -251,13 +261,14 @@
         }
 }
 
-/* @media all and (max-width: 864px){
-.nav {
+@media all and (max-width: 864px){
+.nav  , .nav2{
     position: absolute;
+    transform: all 0.8s ease;
 
 }
 
 .start{
     display: block;
 }
-} */
+}
