@@ -6,8 +6,11 @@ import axios from 'axios'
 import { useContext } from 'react'
 import { searchContext } from '../First'
 import serverUrl from '../Url'
-import MoreVertIcon from '@mui/icons-material/MoreVert';
-import CloseIcon from '@mui/icons-material/Close';
+// import MoreVertIcon from '@mui/icons-material/MoreVert';
+// import CloseIcon from '@mui/icons-material/Close';
+
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 function Product() {
 
@@ -106,14 +109,15 @@ function Product() {
   return (
     <>
       <div className='books'>
-        <div className='left' >
-        {
+      {
             hiddenList 
 
-              ? <Link to='' className='close' onClick={menu}><CloseIcon /></Link> :
-              <Link to='' className='start' onClick={stops}><MoreVertIcon /></Link>
+              ? <Link to=''className='close' onClick={menu}><ArrowBackIcon /></Link> :
+              <Link to=''className='start' onClick={stops}><ArrowForwardIcon/></Link>
           }
 
+        <div className='left'  >
+     
           
           <h2>Bookshelf Chronicles</h2>
           <h3>History</h3>

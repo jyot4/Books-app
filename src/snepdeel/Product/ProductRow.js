@@ -11,6 +11,7 @@ import { useNavigate } from 'react-router-dom';
 import serverUrl from '../Url';
 import {  ToastContainer,toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import gsap from 'gsap'
 
 function ProductRow(props) {
 
@@ -75,7 +76,16 @@ if(!message){
         })
     }
      
+///........................gsap use.......................//
+useEffect(()=>{
+gsap.from('.singleBook',{
 
+duration:1,
+scale: 0.7,
+stagger:0.3
+
+})
+},[filterBooks])
 
     return (
         <div className='bookRow'>

@@ -19,7 +19,7 @@ function LoginForm() {
     axios.post("http://localhost:8080/login",{username,password})
     .then((result)=>{
       if(result.status === 200){ 
-        console.log(" maja aa gya")
+        console.log("maja aa gya")
         localStorage.setItem("session", result.data)
          navigate("/")
        

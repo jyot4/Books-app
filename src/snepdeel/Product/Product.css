@@ -7,6 +7,7 @@
 .books {
     width: 100%;
     display: flex;
+    position: relative;
    
     /* align-items: center; */
     /* justify-content: center; */
@@ -41,12 +42,12 @@
 
 .left h2 {
     font-size: 27px;
-    transition: all 0.8s ease;
+    
 }
 .left h3{
     font-size: 22px;   
     margin-top: 10px;
-    transition: all 0.8s ease;
+
 }
 
 .left ul li {
@@ -71,14 +72,14 @@
     /* height: 100%; */
     transition: all 0.8s ease;
     color:  #200c06;
-    transition: all 0.7s ease;
+
     text-decoration: none;
     background-color:  white;
 }
 
 .left ul li a:hover {
     background-color: #f0eae8;
-    transform: translateY(-5px);
+   
     box-shadow: 0px 5px 5px  #aa7a69;
     color:  #110501;
 }
@@ -98,8 +99,8 @@
      display: none;
 }
 
-.start svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-i4bv87-MuiSvgIcon-root {
-    color: white;
+.start svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-i4bv87-MuiSvgIcon-root  , .close .css-i4bv87-MuiSvgIcon-root {
+    color:#AF6B58;
     font-size: 35px;
     text-decoration:  none;
 }
@@ -112,6 +113,7 @@
 .book {
     /* display: flex; */
     flex-wrap: wrap;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -263,7 +265,22 @@
         }
 }
 
-@media all and (max-width: 864px){
+/* @media all and (max-width: 864px){
+
+.books .left {
+    position: absolute;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 40%;
+  
+    height: 100vh;
+    z-index: -10;
+    /* position: sticky; */
+/* } */
+/* .books .right{
+    width: 100%;
+}
+
 .nav  , .nav2{
     position: absolute;
     transform: all 0.8s ease;
@@ -273,4 +290,4 @@
 .start{
     display: block;
 }
-}
+} */ 
